@@ -33,11 +33,14 @@ struct ChatView: View {
                     
                 }
                 .navigationTitle("Chats")
-                .navigationViewStyle(.stack)
+                
             .searchable(text: $searchableText)
             }
         }
+        .navigationViewStyle(.stack)
+        
     }
+        
 }
 
 struct ChatView_Previews: PreviewProvider {

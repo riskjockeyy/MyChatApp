@@ -25,6 +25,7 @@ struct ContactsView: View {
             .searchable(text: $searchableText)
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

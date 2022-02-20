@@ -68,10 +68,11 @@ struct ProfileView: View {
 
                 }
                 .navigationTitle("Profile")
-                .navigationViewStyle(.stack)
             
             }
+            
         }
+        .navigationViewStyle(.stack)
 
     }
 }

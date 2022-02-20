@@ -104,8 +104,8 @@ struct SignInView: View {
     }
 }
 
-//struct SignInView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SignInView(showingSigninPage: .constant(true), isShowingHomePag)
-//    }
-//}
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView(showingSigninPage: .constant(true))
+    }
+}
