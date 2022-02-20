@@ -57,17 +57,7 @@ struct CreateAccontView: View {
                 showingCreateAccountPage = false
                 //sign UP
             } label: {
-                ZStack {
-                    Rectangle()
-                        .frame(width: 197, height: 44)
-                        .foregroundColor(.blue)
-                        .cornerRadius(10)
-                    
-                    Text("Sign Up")
-                        .foregroundColor(.white)
-                        .font(.system(size: 18, weight: .medium, design: .default))
-                    
-                }
+               CustomButton(buttonText: "Sign Up")
             }
             
             Spacer()

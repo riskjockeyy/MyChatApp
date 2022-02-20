@@ -11,6 +11,8 @@ struct SignInView: View {
     @Binding var showingSigninPage :Bool
     @State var email = ""
     @State var password = ""
+    @State var showingForgotPasswordPage = false
+    @State var sheetWithPhoneNumber = false
     var body: some View {
         VStack {
             
@@ -47,10 +49,16 @@ struct SignInView: View {
                 Button("Forget Password?")
                 {
                     // login with phone
-                    
+                    showingForgotPasswordPage = true
                 }
                 .foregroundColor(.blue)
                 .font(.system(size: 12, weight: .regular))
+                .sheet(isPresented: $showingForgotPasswordPage) {
+                    // on dismiss
+                } content: {
+                    ForgotPasswordView(showingForgotPasswordPage: $showingForgotPasswordPage)
+                }
+
                 
             }
             .padding([.trailing, .bottom])
@@ -62,17 +70,7 @@ struct SignInView: View {
                 // Log in
             } label: {
                 
-                ZStack {
-                    Rectangle()
-                        .frame(width: 197, height: 44)
-                        .foregroundColor(.blue)
-                        .cornerRadius(10)
-                    
-                    Text("Log In")
-                        .foregroundColor(.white)
-                        .font(.system(size: 18, weight: .medium, design: .default))
-                    
-                }
+               CustomButton(buttonText: "Log In")
             }
             
             
@@ -83,7 +81,14 @@ struct SignInView: View {
             
             Button("Login with phone number") {
                 // login with phone
+                sheetWithPhoneNumber = true
             }
+            .sheet(isPresented: $sheetWithPhoneNumber) {
+                //
+            } content: {
+                LoginWithPhone(sheetWithPhoneNumber: $sheetWithPhoneNumber)
+            }
+
             Spacer()
             
         }

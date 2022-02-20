@@ -45,17 +45,7 @@ struct LoginPage: View {
                         // login
                         showingSigninPage = true
                     } label: {
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 197, height: 44)
-                                .foregroundColor(.blue)
-                            .cornerRadius(10)
-                            
-                            Text("Log In")
-                                .foregroundColor(.white)
-                                .font(.system(size: 18, weight: .medium, design: .default))
-                            
-                        }
+                       CustomButton(buttonText: "Log In")
                         .sheet(isPresented: $showingSigninPage) {
                             // on dismiss
                         } content: {
@@ -69,20 +59,7 @@ struct LoginPage: View {
                         // create the account
                         showingCreateAccountPage = true
                     } label: {
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 197, height: 44)
-                                .foregroundColor(.blue)
-                                .shadow(radius: 40)
-                                
-                            .cornerRadius(10)
-                            
-                            
-                            Text("Sign Up")
-                                .foregroundColor(Color(.white))
-                                .font(.system(size: 18, weight: .medium, design: .default))
-                            
-                        }
+                       CustomButton(buttonText: "Sign Up")
                     }
                     .buttonStyle(.borderless)
                     .sheet(isPresented: $showingCreateAccountPage) {
