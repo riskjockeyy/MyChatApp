@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4FF6533027C18B6C008DC321 /* MyChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */; };
-		4FF6533227C18B6C008DC321 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6533127C18B6C008DC321 /* ContentView.swift */; };
+		4FF6533227C18B6C008DC321 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6533127C18B6C008DC321 /* OnboardingView.swift */; };
 		4FF6533427C18B6D008DC321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6533327C18B6D008DC321 /* Assets.xcassets */; };
 		4FF6533727C18B6D008DC321 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6533627C18B6D008DC321 /* Preview Assets.xcassets */; };
+		4FF6533F27C18BE7008DC321 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6533E27C18BE7008DC321 /* FirstView.swift */; };
+		4FF6534127C18BEE008DC321 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534027C18BEE008DC321 /* SecondView.swift */; };
+		4FF6534327C18BF4008DC321 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534227C18BF4008DC321 /* ThirdView.swift */; };
+		4FF6534527C18C01008DC321 /* ForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534427C18C01008DC321 /* ForthView.swift */; };
+		4FF6534727C190F5008DC321 /* TextandImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534627C190F5008DC321 /* TextandImage.swift */; };
+		4FF6534B27C193F7008DC321 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534A27C193F7008DC321 /* LoginPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4FF6532C27C18B6C008DC321 /* MyChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatAppApp.swift; sourceTree = "<group>"; };
-		4FF6533127C18B6C008DC321 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4FF6533127C18B6C008DC321 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4FF6533327C18B6D008DC321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF6533627C18B6D008DC321 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FF6533E27C18BE7008DC321 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		4FF6534027C18BEE008DC321 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		4FF6534227C18BF4008DC321 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		4FF6534427C18C01008DC321 /* ForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthView.swift; sourceTree = "<group>"; };
+		4FF6534627C190F5008DC321 /* TextandImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextandImage.swift; sourceTree = "<group>"; };
+		4FF6534A27C193F7008DC321 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */,
-				4FF6533127C18B6C008DC321 /* ContentView.swift */,
+				4FF6533D27C18B7B008DC321 /* Onboarding */,
+				4FF6534927C193D5008DC321 /* AccountCreation */,
 				4FF6533327C18B6D008DC321 /* Assets.xcassets */,
 				4FF6533527C18B6D008DC321 /* Preview Content */,
 			);
@@ -65,6 +78,27 @@
 				4FF6533627C18B6D008DC321 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FF6533D27C18B7B008DC321 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4FF6533127C18B6C008DC321 /* OnboardingView.swift */,
+				4FF6534627C190F5008DC321 /* TextandImage.swift */,
+				4FF6533E27C18BE7008DC321 /* FirstView.swift */,
+				4FF6534027C18BEE008DC321 /* SecondView.swift */,
+				4FF6534227C18BF4008DC321 /* ThirdView.swift */,
+				4FF6534427C18C01008DC321 /* ForthView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4FF6534927C193D5008DC321 /* AccountCreation */ = {
+			isa = PBXGroup;
+			children = (
+				4FF6534A27C193F7008DC321 /* LoginPage.swift */,
+			);
+			path = AccountCreation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FF6533227C18B6C008DC321 /* ContentView.swift in Sources */,
+				4FF6534B27C193F7008DC321 /* LoginPage.swift in Sources */,
+				4FF6533227C18B6C008DC321 /* OnboardingView.swift in Sources */,
+				4FF6534327C18BF4008DC321 /* ThirdView.swift in Sources */,
+				4FF6534727C190F5008DC321 /* TextandImage.swift in Sources */,
+				4FF6534527C18C01008DC321 /* ForthView.swift in Sources */,
+				4FF6533F27C18BE7008DC321 /* FirstView.swift in Sources */,
+				4FF6534127C18BEE008DC321 /* SecondView.swift in Sources */,
 				4FF6533027C18B6C008DC321 /* MyChatAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
