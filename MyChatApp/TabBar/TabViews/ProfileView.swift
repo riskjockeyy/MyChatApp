@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var searchableText = ""
+    @Binding var isShowingHomePaga :Bool
     var body: some View {
         NavigationView {
             ScrollView {
@@ -58,6 +59,7 @@ struct ProfileView: View {
                     
                     Button {
                         // logout
+                        isShowingHomePaga = false
                     } label: {
                         
                         CustomButton(buttonText: "Log Out")
@@ -76,6 +78,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(isShowingHomePaga: .constant(true))
     }
 }

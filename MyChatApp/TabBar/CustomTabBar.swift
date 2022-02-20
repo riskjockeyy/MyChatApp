@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CustomTabBar: View {
+    @Binding var isShowingHomePaga :Bool
     var body: some View {
         TabView {
                 ChatView()
@@ -34,7 +35,7 @@ struct CustomTabBar: View {
                     }
                 }
             
-            ProfileView()
+            ProfileView(isShowingHomePaga: $isShowingHomePaga)
                 .tabItem {
                     //
                     VStack {
@@ -51,6 +52,6 @@ struct CustomTabBar: View {
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabBar()
+        CustomTabBar(isShowingHomePaga: .constant(true))
     }
 }

@@ -13,6 +13,8 @@ struct SignInView: View {
     @State var password = ""
     @State var showingForgotPasswordPage = false
     @State var sheetWithPhoneNumber = false
+    @State var isShowingHomePaga = false
+    
     var body: some View {
         VStack {
             
@@ -66,12 +68,19 @@ struct SignInView: View {
             
             
             Button {
-                showingSigninPage = false
+              //  showingSigninPage = false
                 // Log in
+                isShowingHomePaga = true
             } label: {
                 
                CustomButton(buttonText: "Log In")
             }
+            .fullScreenCover(isPresented: $isShowingHomePaga) {
+                
+            } content: {
+                CustomTabBar(isShowingHomePaga: $isShowingHomePaga)
+            }
+
             
             
             Spacer()
@@ -95,8 +104,8 @@ struct SignInView: View {
     }
 }
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView(showingSigninPage: .constant(true))
-    }
-}
+//struct SignInView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignInView(showingSigninPage: .constant(true), isShowingHomePag)
+//    }
+//}
