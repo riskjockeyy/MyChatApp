@@ -17,6 +17,9 @@
 		4FF6534527C18C01008DC321 /* ForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534427C18C01008DC321 /* ForthView.swift */; };
 		4FF6534727C190F5008DC321 /* TextandImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534627C190F5008DC321 /* TextandImage.swift */; };
 		4FF6534B27C193F7008DC321 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534A27C193F7008DC321 /* LoginPage.swift */; };
+		4FF6534D27C21660008DC321 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534C27C21660008DC321 /* SignInView.swift */; };
+		4FF6534F27C21734008DC321 /* CreateAccontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6534E27C21734008DC321 /* CreateAccontView.swift */; };
+		4FF6535127C23C0A008DC321 /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6535027C23C0A008DC321 /* CustomeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		4FF6534427C18C01008DC321 /* ForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthView.swift; sourceTree = "<group>"; };
 		4FF6534627C190F5008DC321 /* TextandImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextandImage.swift; sourceTree = "<group>"; };
 		4FF6534A27C193F7008DC321 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		4FF6534C27C21660008DC321 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		4FF6534E27C21734008DC321 /* CreateAccontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccontView.swift; sourceTree = "<group>"; };
+		4FF6535027C23C0A008DC321 /* CustomeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				4FF6534A27C193F7008DC321 /* LoginPage.swift */,
+				4FF6534C27C21660008DC321 /* SignInView.swift */,
+				4FF6534E27C21734008DC321 /* CreateAccontView.swift */,
+				4FF6535027C23C0A008DC321 /* CustomeTextField.swift */,
 			);
 			path = AccountCreation;
 			sourceTree = "<group>";
@@ -171,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF6534D27C21660008DC321 /* SignInView.swift in Sources */,
+				4FF6535127C23C0A008DC321 /* CustomeTextField.swift in Sources */,
 				4FF6534B27C193F7008DC321 /* LoginPage.swift in Sources */,
+				4FF6534F27C21734008DC321 /* CreateAccontView.swift in Sources */,
 				4FF6533227C18B6C008DC321 /* OnboardingView.swift in Sources */,
 				4FF6534327C18BF4008DC321 /* ThirdView.swift in Sources */,
 				4FF6534727C190F5008DC321 /* TextandImage.swift in Sources */,

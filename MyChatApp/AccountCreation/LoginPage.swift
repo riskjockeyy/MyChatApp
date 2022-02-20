@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginPage: View {
     @State var isShowingFullScreen = true
+    @State var showingSigninPage = false
+    @State var showingCreateAccountPage = false
     var body: some View {
         
         ZStack {
@@ -41,6 +43,7 @@ struct LoginPage: View {
                 VStack(spacing: 15) {
                     Button {
                         // login
+                        showingSigninPage = true
                     } label: {
                         ZStack {
                             Rectangle()
@@ -53,10 +56,18 @@ struct LoginPage: View {
                                 .font(.system(size: 18, weight: .medium, design: .default))
                             
                         }
+                        .sheet(isPresented: $showingSigninPage) {
+                            // on dismiss
+                        } content: {
+                            SignInView(showingSigninPage: $showingSigninPage)
+                        }
+
+                        
                 }
                     
                     Button {
                         // create the account
+                        showingCreateAccountPage = true
                     } label: {
                         ZStack {
                             Rectangle()
@@ -74,6 +85,12 @@ struct LoginPage: View {
                         }
                     }
                     .buttonStyle(.borderless)
+                    .sheet(isPresented: $showingCreateAccountPage) {
+                        // on dismiss
+                    } content: {
+                        CreateAccontView(showingCreateAccountPage: $showingCreateAccountPage)
+                    }
+
                   
                     
                 }
