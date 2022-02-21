@@ -12,6 +12,7 @@ struct MyChatAppApp: App {
     var body: some Scene {
         WindowGroup {
             LoginPage()
+                .environmentObject(ContentViewModel())
         }
     }
 }

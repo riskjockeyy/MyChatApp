@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F14B06727C38E390062843F /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F14B06627C38E390062843F /* ContactViewModel.swift */; };
 		4FAF639227C262C20012583E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639127C262C20012583E /* ChatView.swift */; };
 		4FAF639427C262D10012583E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639327C262D10012583E /* ProfileView.swift */; };
 		4FAF639627C2630B0012583E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639527C2630B0012583E /* ContactsView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F14B06627C38E390062843F /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		4FAF639127C262C20012583E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4FAF639327C262D10012583E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4FAF639527C2630B0012583E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F14B06327C38DFA0062843F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F14B06627C38E390062843F /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4F14B06427C38E040062843F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F14B06527C38E080062843F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FF6535C27C2564A008DC321 /* TabBar */,
+				4FF6533D27C18B7B008DC321 /* Onboarding */,
+				4FF6534927C193D5008DC321 /* AccountCreation */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4FF6532327C18B6C008DC321 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */,
-				4FF6535C27C2564A008DC321 /* TabBar */,
-				4FF6533D27C18B7B008DC321 /* Onboarding */,
-				4FF6534927C193D5008DC321 /* AccountCreation */,
+				4F14B06527C38E080062843F /* Views */,
+				4F14B06427C38E040062843F /* Model */,
+				4F14B06327C38DFA0062843F /* ViewModel */,
 				4FF6535327C2452F008DC321 /* Helper */,
 				4FF6533327C18B6D008DC321 /* Assets.xcassets */,
 				4FF6533527C18B6D008DC321 /* Preview Content */,
@@ -235,6 +262,7 @@
 				4FAF639627C2630B0012583E /* ContactsView.swift in Sources */,
 				4FF6535E27C25658008DC321 /* CustomTabBar.swift in Sources */,
 				4FF6535527C24552008DC321 /* CountryView.swift in Sources */,
+				4F14B06727C38E390062843F /* ContactViewModel.swift in Sources */,
 				4FF6535927C24D5B008DC321 /* CustomButton.swift in Sources */,
 				4FF6534F27C21734008DC321 /* CreateAccontView.swift in Sources */,
 				4FF6533227C18B6C008DC321 /* OnboardingView.swift in Sources */,
@@ -380,6 +408,7 @@
 				DEVELOPMENT_TEAM = YG494KB2QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Sync Your contact to chat with them.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data please";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -410,6 +439,7 @@
 				DEVELOPMENT_TEAM = YG494KB2QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Sync Your contact to chat with them.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data please";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

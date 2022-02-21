@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ForthView: View {
     @Binding var isShowingFullScreen :Bool
+    @EnvironmentObject var model: ContentViewModel
     var body: some View {
         ZStack {
             Color.blue
@@ -35,6 +36,9 @@ struct ForthView: View {
             
            
 
+        }
+        .onAppear {
+            model.getLocalContacts()
         }
         
     }
