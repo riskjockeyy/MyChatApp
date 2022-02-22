@@ -8,34 +8,42 @@
 import SwiftUI
 
 struct ContactsView: View {
-    @State var searchableText = ""
+   
     @EnvironmentObject var model: ContentViewModel
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
-                    
-                    List(model.user) { user in
+        
+        if model.user.count > 0 {
+            NavigationView {
+                ScrollView {
+                    VStack {
                         
-                        VStack {
-                            Text(user.firstname ?? "")
-                            Text(user.phone ?? "")
-                        }
-                        }
-                   
-                    
+                        List(model.user) { user in
+                            
+                            VStack {
+                                Text("LIst of contacts")
+                                Text(user.firstname ?? "not found")
+                            }
+                            }
+                       
+                        
+                    }
+                    .navigationTitle("Contacts")
+                    .navigationViewStyle(.stack)
+               // .searchable(text: $searchableText)
                 }
-                .navigationTitle("Contacts")
-                .navigationViewStyle(.stack)
-           // .searchable(text: $searchableText)
             }
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
+        else {
+            Text("NO Contacts")
+        }
+        
     }
 }
 
 struct Contacts_Previews: PreviewProvider {
     static var previews: some View {
         ContactsView()
+            .environmentObject(ContentViewModel())
     }
 }

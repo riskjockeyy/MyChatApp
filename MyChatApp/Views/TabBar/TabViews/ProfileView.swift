@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct ProfileView: View {
     @State var searchableText = ""
     @Binding var isShowingHomePaga :Bool
@@ -59,6 +59,7 @@ struct ProfileView: View {
                     
                     Button {
                         // logout
+                        AuthViewModel.logout()
                         isShowingHomePaga = false
                     } label: {
                         

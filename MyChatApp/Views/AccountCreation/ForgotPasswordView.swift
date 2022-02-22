@@ -6,21 +6,52 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct ForgotPasswordView: View {
     @Binding var showingForgotPasswordPage:Bool
     @State var email = ""
+    @State var errorMessage: String?
+    @State var showingAlert = false
     var body: some View {
         
         VStack {
             Text("Reset Password")
-            CustomeTextField(text: "enter your email", text2: email)
+            TextField("Enter email", text: $email)
+                .foregroundColor(Color("secendoryText"))
+                .font(.system(size: 18, weight: .regular))
+                .frame(width: 275)
+                .cornerRadius(20)
+                .shadow(radius: 5)
+                .textFieldStyle(.roundedBorder)
+                .padding(.bottom)
             
             Button {
-                // reset the password 
+                // reset the password
+                showingAlert = true
+                Auth.auth().sendPasswordReset(withEmail: email) { error in
+                    // handetl the error
+                    if error != nil {
+                        errorMessage = error!.localizedDescription
+                    }
+                    
+                }
             } label: {
                 CustomButton(buttonText: "Reset Password")
             }
+            
+            .alert(isPresented: $showingAlert) {
+                
+                Alert(title: Text("Email Sent"), message: Text("Please check you email"), dismissButton: .cancel(Text("OK")))
+                
+                
+            }
+            
+            
+            
+            if errorMessage != nil {
+                Text(errorMessage!)
+            }
+          
 
         }
     }

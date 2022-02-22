@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
 struct CreateAccontView: View {
     @Binding var showingCreateAccountPage: Bool
     @State var email = ""
@@ -14,6 +14,7 @@ struct CreateAccontView: View {
     @State var firstname = ""
     @State var lastName = ""
     @State var phoneNumber = ""
+    @State var errorMessgea :String?
     
     var body: some View {
         VStack {
@@ -34,7 +35,8 @@ struct CreateAccontView: View {
        
                 CustomeTextField(text: "Last Name", text2: lastName)
             
-            CustomeTextField(text: "email", text2: email)
+            TextField("email", text: $email)
+            
                 .keyboardType(.emailAddress)
             
             CustomeTextField(text: "Phone Number", text2: phoneNumber)
@@ -48,14 +50,28 @@ struct CreateAccontView: View {
                 .shadow(radius: 5)
                 .textFieldStyle(.roundedBorder)
                 .padding(.bottom)
+            
+            if errorMessgea != nil {
+                Text(errorMessgea!)
+            }
                 
  
         }
         Spacer()
             
             Button {
-                showingCreateAccountPage = false
+                
                 //sign UP
+                
+                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                    if error == nil {
+                        showingCreateAccountPage = false
+                    }
+                    
+                    else if error != nil  {
+                        errorMessgea = error!.localizedDescription
+                    }
+                }
             } label: {
                CustomButton(buttonText: "Sign Up")
             }

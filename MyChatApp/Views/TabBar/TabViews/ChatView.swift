@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ChatView: View {
     @State var searchableText = ""
+    @EnvironmentObject var model: ContentViewModel
     var body: some View {
+        
+        
         NavigationView {
             ScrollView {
                 VStack {
@@ -37,9 +40,13 @@ struct ChatView: View {
             .searchable(text: $searchableText)
             }
         }
+        .onAppear(perform: {
+            model.getLocalContacts()
+        })
         .navigationViewStyle(.stack)
         
     }
+        
         
 }
 

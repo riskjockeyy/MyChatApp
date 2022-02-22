@@ -50,6 +50,7 @@
 		4F14B07A27C4E7B00062843F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F14B07C27C4E7D00062843F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F14B07E27C4EA6F0062843F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		4F14B08027C52C7C0062843F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4FAF639127C262C20012583E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4FAF639327C262D10012583E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4FAF639527C2630B0012583E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -110,8 +111,8 @@
 		4F14B06527C38E080062843F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4FF6535C27C2564A008DC321 /* TabBar */,
 				4FF6533D27C18B7B008DC321 /* Onboarding */,
+				4FF6535C27C2564A008DC321 /* TabBar */,
 				4FF6534927C193D5008DC321 /* AccountCreation */,
 			);
 			path = Views;
@@ -145,6 +146,7 @@
 		4FF6532E27C18B6C008DC321 /* MyChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				4F14B08027C52C7C0062843F /* Info.plist */,
 				4FF6532F27C18B6C008DC321 /* MyChatApp.swift */,
 				4F14B07C27C4E7D00062843F /* AppDelegate.swift */,
 				4F14B06527C38E080062843F /* Views */,
@@ -460,6 +462,7 @@
 				DEVELOPMENT_TEAM = YG494KB2QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyChatApp/Info.plist;
 				INFOPLIST_KEY_NSContactsUsageDescription = "Sync Your contact to chat with them.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data please";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -491,6 +494,7 @@
 				DEVELOPMENT_TEAM = YG494KB2QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyChatApp/Info.plist;
 				INFOPLIST_KEY_NSContactsUsageDescription = "Sync Your contact to chat with them.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data please";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignInView: View {
     @Binding var showingSigninPage :Bool
@@ -14,6 +15,7 @@ struct SignInView: View {
     @State var showingForgotPasswordPage = false
     @State var sheetWithPhoneNumber = false
     @State var isShowingHomePaga = false
+    @State var errorMessage: String?
     
     var body: some View {
         VStack {
@@ -28,7 +30,16 @@ struct SignInView: View {
             
             
             Group {
-                CustomeTextField(text: "email", text2: email)
+                TextField("email", text: $email)
+                    .foregroundColor(Color("secendoryText"))
+                    .font(.system(size: 18, weight: .regular))
+                    .frame(width: 275)
+                    .cornerRadius(20)
+                    .shadow(radius: 5)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.bottom)
+                    .keyboardType(.emailAddress)
+
                 
                 SecureField("Password", text: $password)
                     .foregroundColor(Color("secendoryText"))
@@ -42,6 +53,10 @@ struct SignInView: View {
                     
                 
                 .padding(.bottom)
+                
+                if errorMessage != nil {
+                    Text(errorMessage!)
+                }
             }
             
             
@@ -70,7 +85,15 @@ struct SignInView: View {
             Button {
               //  showingSigninPage = false
                 // Log in
-                isShowingHomePaga = true
+                Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                    if error == nil {
+                        isShowingHomePaga = true
+                    }
+                    else if error != nil {
+                        errorMessage = error!.localizedDescription
+                    }
+                }
+                
             } label: {
                 
                CustomButton(buttonText: "Log In")

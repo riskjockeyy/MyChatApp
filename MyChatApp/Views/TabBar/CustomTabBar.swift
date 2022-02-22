@@ -55,7 +55,7 @@ struct CustomTabBar: View {
                 .onAppear {
                     authenticate()
                 }
-            
+                .environmentObject(ContentViewModel())
         
         
                 
