@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+
 @main
-struct MyChatAppApp: App {
+struct MyChatApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             LoginPage()
                 .environmentObject(ContentViewModel())
+            
+            
         }
     }
 }

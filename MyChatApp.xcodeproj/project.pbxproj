@@ -16,10 +16,13 @@
 		4F14B07527C4320E0062843F /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4F14B07427C4320E0062843F /* FirebaseFirestoreSwift-Beta */; };
 		4F14B07727C4320E0062843F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F14B07627C4320E0062843F /* FirebaseStorage */; };
 		4F14B07927C4320E0062843F /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4F14B07827C4320E0062843F /* FirebaseStorageSwift-Beta */; };
+		4F14B07B27C4E7B00062843F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F14B07A27C4E7B00062843F /* GoogleService-Info.plist */; };
+		4F14B07D27C4E7D00062843F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F14B07C27C4E7D00062843F /* AppDelegate.swift */; };
+		4F14B07F27C4EA6F0062843F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F14B07E27C4EA6F0062843F /* AuthViewModel.swift */; };
 		4FAF639227C262C20012583E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639127C262C20012583E /* ChatView.swift */; };
 		4FAF639427C262D10012583E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639327C262D10012583E /* ProfileView.swift */; };
 		4FAF639627C2630B0012583E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF639527C2630B0012583E /* ContactsView.swift */; };
-		4FF6533027C18B6C008DC321 /* MyChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */; };
+		4FF6533027C18B6C008DC321 /* MyChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6532F27C18B6C008DC321 /* MyChatApp.swift */; };
 		4FF6533227C18B6C008DC321 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6533127C18B6C008DC321 /* OnboardingView.swift */; };
 		4FF6533427C18B6D008DC321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6533327C18B6D008DC321 /* Assets.xcassets */; };
 		4FF6533727C18B6D008DC321 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6533627C18B6D008DC321 /* Preview Assets.xcassets */; };
@@ -44,11 +47,14 @@
 		4F14B06827C42BC50062843F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		4F14B06B27C42CAB0062843F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		4F14B06D27C42FF30062843F /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
+		4F14B07A27C4E7B00062843F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F14B07C27C4E7D00062843F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F14B07E27C4EA6F0062843F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		4FAF639127C262C20012583E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4FAF639327C262D10012583E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4FAF639527C2630B0012583E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		4FF6532C27C18B6C008DC321 /* MyChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatAppApp.swift; sourceTree = "<group>"; };
+		4FF6532F27C18B6C008DC321 /* MyChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatApp.swift; sourceTree = "<group>"; };
 		4FF6533127C18B6C008DC321 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4FF6533327C18B6D008DC321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF6533627C18B6D008DC321 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4F14B06627C38E390062843F /* ContactViewModel.swift */,
+				4F14B07E27C4EA6F0062843F /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 		4FF6532327C18B6C008DC321 = {
 			isa = PBXGroup;
 			children = (
+				4F14B07A27C4E7B00062843F /* GoogleService-Info.plist */,
 				4FF6532E27C18B6C008DC321 /* MyChatApp */,
 				4FF6532D27C18B6C008DC321 /* Products */,
 			);
@@ -137,7 +145,8 @@
 		4FF6532E27C18B6C008DC321 /* MyChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				4FF6532F27C18B6C008DC321 /* MyChatAppApp.swift */,
+				4FF6532F27C18B6C008DC321 /* MyChatApp.swift */,
+				4F14B07C27C4E7D00062843F /* AppDelegate.swift */,
 				4F14B06527C38E080062843F /* Views */,
 				4F14B06427C38E040062843F /* Model */,
 				4F14B06327C38DFA0062843F /* ViewModel */,
@@ -282,6 +291,7 @@
 			files = (
 				4FF6533727C18B6D008DC321 /* Preview Assets.xcassets in Resources */,
 				4FF6533427C18B6D008DC321 /* Assets.xcassets in Resources */,
+				4F14B07B27C4E7B00062843F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +322,10 @@
 				4FAF639227C262C20012583E /* ChatView.swift in Sources */,
 				4FF6534527C18C01008DC321 /* ForthView.swift in Sources */,
 				4FF6533F27C18BE7008DC321 /* FirstView.swift in Sources */,
+				4F14B07F27C4EA6F0062843F /* AuthViewModel.swift in Sources */,
+				4F14B07D27C4E7D00062843F /* AppDelegate.swift in Sources */,
 				4FF6534127C18BEE008DC321 /* SecondView.swift in Sources */,
-				4FF6533027C18B6C008DC321 /* MyChatAppApp.swift in Sources */,
+				4FF6533027C18B6C008DC321 /* MyChatApp.swift in Sources */,
 				4F14B06E27C42FF30062843F /* TextHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

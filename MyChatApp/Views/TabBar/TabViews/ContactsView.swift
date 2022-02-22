@@ -9,20 +9,25 @@ import SwiftUI
 
 struct ContactsView: View {
     @State var searchableText = ""
+    @EnvironmentObject var model: ContentViewModel
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     
-                    List(0..<13) { item in
-                       Text(String(item + 1))
-                    }
+                    List(model.user) { user in
+                        
+                        VStack {
+                            Text(user.firstname ?? "")
+                            Text(user.phone ?? "")
+                        }
+                        }
                    
                     
                 }
                 .navigationTitle("Contacts")
                 .navigationViewStyle(.stack)
-            .searchable(text: $searchableText)
+           // .searchable(text: $searchableText)
             }
         }
         .navigationViewStyle(.stack)
